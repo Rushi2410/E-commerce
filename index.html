@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CozaStore</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <!-- fontawesone -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="container-fluid fix ps-0 pe-0">
+      <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand ps-4" href=""
+          ><img src="images/logo-01.png.webp" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#manucard"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="manucard">
+          <div class="navbar-nav">
+            <a class="nav-link active me-3" href="">Home</a>
+            <a class="nav-link me-3" href="#shopNowHere">Shop</a>
+            <a class="nav-link me-3" href="#feature">Features</a>
+            <a class="nav-link me-3" href="">Blog</a>
+            <a class="nav-link me-3" href="#footer">About</a>
+            <a class="nav-link me-3" href="#footer">Contact</a>
+          </div>
+        </div>
+        <div class="icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-cart-shopping shopcart" onclick="toggleCart()"
+            ><span id="cartItemCount">0</span></i
+          >
+          <i class="fa-regular fa-heart"></i>
+        </div>
+      </nav>
+    </div>
+
+    <!--view cart -->
+    <div id="cartOverlay" class="overlay">
+      <div class="cart">
+        <div class="cart-header">
+          <h4>Cart</h4>
+          <button class="close-btn" onclick="toggleCart()">&times;</button>
+        </div>
+        <div id="cartItems" class="cart-items">
+        </div>
+        <div id="cartSummary" class="cart-summary"></div>
+      </div>
+    </div>
+
+    <!-- carousel section -->
+    <section>
+      <div id="Example" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div
+            class="carousel-item active sliding-img bg-std"
+            style="background-image: url(images/coursel1.jpeg)"
+          >
+            <div class="carousel-caption">
+              <h2><span> Men New-Seasion</span></h2>
+              <div class="slide1"><h1>JACKETS & COATS</h1></div>
+              <div class="slide-btn"><button class="shop">SHOP</button></div>
+            </div>
+          </div>
+          <div
+            class="carousel-item sliding-img bg-std"
+            style="background-image: url(images/coursel2.jpeg)"
+          >
+            <div class="carousel-caption">
+              <h2><span> Men New-Seasion</span></h2>
+              <div class="slide1"><h1>JACKETS & COATS</h1></div>
+              <div class="slide-btn"><button class="shop">SHOP</button></div>
+            </div>
+          </div>
+
+          <div
+            class="carousel-item sliding-img bg-std"
+            style="background-image: url(images/coursel3.jpeg)"
+          >
+            <div class="carousel-caption">
+              <h2><span> Men New-Seasion</span></h2>
+              <div class="slide1"><h1>JACKETS & COATS</h1></div>
+              <div class="slide-btn"><button class="shop">SHOP</button></div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#Example"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#Example"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- product banner -->
+    <section id="feature">
+      <div class="container-fluid banner p-5">
+        <div class="row">
+          <div class="col-lg-4 impcap">
+            <div>
+              <img src="images/banner-01.jpg.webp" alt="" />
+              <div class="color"></div>
+            </div>
+
+            <div class="category">
+              <h2>Women</h2>
+              <p>Spring 2018</p>
+            </div>
+            <div class="shopnow">
+              <div class="sub"><h7>SHOP NOW</h7></div>
+            </div>
+          </div>
+          <div class="col-lg-4 impcap">
+            <img src="images/banner-02.jpg.webp" alt="" />
+            <div class="color"></div>
+            <div class="category">
+              <h2>Women</h2>
+              <p>Spring 2018</p>
+            </div>
+            <div class="shopnow">
+              <div class="sub"><h7>SHOP NOW</h7></div>
+            </div>
+          </div>
+          <div class="col-lg-4 impcap">
+            <img src="images/banner-03.jpg.webp " alt="" />
+            <div class="color"></div>
+            <div class="category">
+              <h2>Women</h2>
+              <p>Spring 2018</p>
+            </div>
+            <div class="shopnow">
+              <div class="sub"><h7>SHOP NOW</h7></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- product overview -->
+    <section id="shopNowHere">
+      <div class="container-fluid ps-5 pe-5">
+        <div class="heading">
+          <h1>PRODUCT OVERVIEW</h1>
+        </div>
+        <div class="menuContain pt-2 pb-2">
+          <div class="menu">
+            <a href="">All Product</a>
+            <a href="">Women</a>
+            <a href="">Man</a>
+            <a href="">Bag</a>
+            <a href="">Shoes</a>
+            <a href="">Watches</a>
+          </div>
+          <div class="menubutton">
+            <button><img src="images/bars-filter.svg" alt="" />Filter</button>
+            <button><i class="fa-solid fa-magnifying-glass"></i>search</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- product image section-->
+    <section>
+      <div class="container-fluid productImg ps-5 mt-5 pe-5">
+        <div class="row">
+          <!-- row-1 -->
+          <div class="col-lg-3 col-md-4 col-sm-6 scales">
+            <div class="image-container">
+              <img src="images/product-01.jpg.webp" class="img-fluid" alt="" />
+            </div>
+
+            <div class="buy-div">
+              <button class="buy viewCart">Quick View</button>
+            </div>
+            <!-- add to cart modal  -->
+
+            <div class="contain m-3 p-3">
+              <div class="modalImage">
+                <img src="images/product-01.jpg.webp" alt="" />
+              </div>
+              <div class="ms-5">
+                <h3>Lightweight Jacket</h3>
+                <h6>$58.79</h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <form action="">
+                  <label for="size" class="mt-3">Size:</label>
+                  <select name="size" id="">
+                    <option value="">Size M</option>
+                    <option value="">Size S</option>
+                    <option value="">Size L</option>
+                    <option value="">Size Xl</option>
+                  </select>
+                  <br />
+                  <label for="color" class="mt-3">Color:</label>
+                  <select name="color" id="">
+                    <option value="">Red</option>
+                    <option value="">Brown</option>
+                    <option value="">Black</option>
+                    <option value="">Grey</option>
+                  </select>
+
+                  <div class="mt-5 mb-3">
+                    <span
+                      class="addbutton"
+                      onclick="addToCart('Lightweight Jacket',12,'images/product-01.jpg.webp')"
+                      >ADD TO CART</span
+                    >
+                  </div>
+                </form>
+              </div>
+              <div class="close">
+                <button id="closed">X</button>
+              </div>
+            </div>
+            <!--  -->
+            <div class="details mt-3">
+              <a href="">Esprit ruffle shirt</a>
+              <p class="mt-2">$16.23</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 scales">
+            <div class="image-container">
+              <img src="images/product-02.jpg.webp " class="img-fluid" alt="" />
+            </div>
+
+            <div class="buy-div">
+              <button class="buy viewCart">Quick View</button>
+            </div>
+
+            <div class="details mt-3">
+              <a href="">Esprit ruffle shirt</a>
+              <p class="mt-2">$16.23</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 scales">
+            <div class="image-container">
+              <img src="images/product-03.jpg.webp" class="img-fluid" alt="" />
+            </div>
+            <div class="buy-div">
+              <button class="buy viewCart">Quick View</button>
+            </div>
+
+            <div class="details mt-3">
+              <a href="">Esprit ruffle shirt</a>
+              <p class="mt-2">$16.23</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 scales">
+            <div class="image-container">
+              <img src="images/product-04.jpg.webp" class="img-fluid" alt="" />
+            </div>
+            <div class="buy-div">
+              <button class="buy viewCart">Quick View</button>
+            </div>
+
+            <div class="details mt-3">
+              <a href="">Esprit ruffle shirt</a>
+              <p class="mt-2">$16.23</p>
+            </div>
+          </div>
+
+          <!-- row-2 -->
+          <div class="col-lg-3 col-md-4 col-sm-6 scales">
+            <div class="image-container">
+              <img src="images/product-01.jpg.webp" class="img-fluid" alt="" />
+            </div>
+            <div class="buy-div">
+              <button class="buy viewCart">Quick View</button>
+            </div>
+
+            <div class="details mt-3">
+              <a href="">Esprit ruffle shirt</a>
+              <p class="mt-2">$16.23</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 scales">
+            <div class="image-container">
+              <img src="images/product-02.jpg.webp " class="img-fluid" alt="" />
+            </div>
+            <div class="buy-div">
+              <button class="buy viewCart">Quick View</button>
+            </div>
+
+            <div class="details mt-3">
+              <a href="">Esprit ruffle shirt</a>
+              <p class="mt-2">$16.23</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 scales">
+            <div class="image-container">
+              <img src="images/product-03.jpg.webp" class="img-fluid" alt="" />
+            </div>
+            <div class="buy-div">
+              <button class="buy viewCart">Quick View</button>
+            </div>
+
+            <div class="details mt-3">
+              <a href="">Esprit ruffle shirt</a>
+              <p class="mt-2">$16.23</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 scales">
+            <div class="image-container">
+              <img src="images/product-04.jpg.webp" class="img-fluid" alt="" />
+            </div>
+            <div class="buy-div">
+              <button class="buy viewCart">Quick View</button>
+            </div>
+
+            <div class="details mt-3">
+              <a href="">Esprit ruffle shirt</a>
+              <p class="mt-2">$16.23</p>
+            </div>
+          </div>
+          <!-- row-3 -->
+          <div class="col-lg-3 col-md-4 col-sm-6 scales">
+            <div class="image-container">
+              <img src="images/product-01.jpg.webp" class="img-fluid" alt="" />
+            </div>
+            <div class="buy-div">
+              <button class="buy viewCart">Quick View</button>
+            </div>
+
+            <div class="details mt-3">
+              <a href="">Esprit ruffle shirt</a>
+              <p class="mt-2">$16.23</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 scales">
+            <div class="image-container">
+              <img src="images/product-02.jpg.webp " class="img-fluid" alt="" />
+            </div>
+            <div class="buy-div">
+              <button class="buy viewCart">Quick View</button>
+            </div>
+
+            <div class="details mt-3">
+              <a href="">Esprit ruffle shirt</a>
+              <p class="mt-2">$16.23</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 scales">
+            <div class="image-container">
+              <img src="images/product-03.jpg.webp" class="img-fluid" alt="" />
+            </div>
+            <div class="buy-div">
+              <button class="buy viewCart">Quick View</button>
+            </div>
+
+            <div class="details mt-3">
+              <a href="">Esprit ruffle shirt</a>
+              <p class="mt-2">$16.23</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 scales">
+            <div class="image-container">
+              <img src="images/product-04.jpg.webp" class="img-fluid" alt="" />
+            </div>
+            <div class="buy-div">
+              <button class="buy viewCart">Quick View</button>
+            </div>
+
+            <div class="details mt-3">
+              <a href="">Esprit ruffle shirt</a>
+              <p class="mt-2">$16.23</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="loadmore">
+        <button>LOAD MORE</button>
+      </div>
+    </section>
+
+    <!-- footer  -->
+    <footer id="footer">
+      <div class="footers">
+        <div class="container-fluid ps-5">
+          <div class="row mt-5 me-4">
+            <div class="col-lg-3 mt-5">
+              <h3>CATEGORIES</h3>
+              <ul class="ps-0">
+                <li><a href="">women</a></li>
+                <li><a href="">man</a></li>
+                <li><a href="">shoes</a></li>
+                <li><a href="">watches</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 mt-5">
+              <h3>CATEGORIES</h3>
+              <ul class="ps-0">
+                <li><a href="">women</a></li>
+                <li><a href="">man</a></li>
+                <li><a href="">shoes</a></li>
+                <li><a href="">watches</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 mt-5">
+              <h3>CATEGORIES</h3>
+              <p>
+                Any questions? Let us know in <br />store at 8th floor, 379
+                Hudson St,<br />
+                New York, NY 10018 or <br />
+                call us on (+1) 96 716 6879
+              </p>
+              <div class="social">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+            </div>
+            <div class="col-lg-3 mt-5">
+              <h3>CATEGORIES</h3>
+              <p>email@example.com</p>
+              <hr />
+              <button class="subscribe">Subscribe</button>
+            </div>
+            <div class="copyright mt-5">
+              <div class="payicon ps-4">
+                <a href=""
+                  ><img src="images/payIcon/banner-01.jpg.webp" alt=""
+                /></a>
+                <a href=""
+                  ><img src="images/payIcon/icon-pay-02.png.webp" alt=""
+                /></a>
+                <a href=""
+                  ><img src="images/payIcon/icon-pay-03.png.webp" alt=""
+                /></a>
+                <a href=""
+                  ><img src="images/payIcon/icon-pay-04.png.webp" alt=""
+                /></a>
+                <a href=""
+                  ><img src="images/payIcon/icon-pay-05.png.webp" alt=""
+                /></a>
+              </div>
+
+              <p>Copyright ©2023 All rights reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
