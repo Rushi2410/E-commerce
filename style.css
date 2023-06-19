@@ -386,7 +386,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: 0.7s;
+  /* transition: 0.7s; */
    z-index: 555;
 }
 .modalImage img{
